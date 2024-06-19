@@ -17,3 +17,18 @@
   font-size: 24px;
   color: #98d3fa;
 }
+
+.comment-list {
+  list-style-type: none;
+}
+
+.comment-list > li{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-remove-comment {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
