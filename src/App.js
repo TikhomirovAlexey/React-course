@@ -1,14 +1,13 @@
 import './App.css';
-import Message from './components/Message';
-import CommentsList from './components/CommentsList';
+import TemperatureConverter from './components/TemperatureConverter';
+import TodoList from './components/TodoList ';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Message text="Lorem ipsum and hello!" />
-        <Message text="Lorem ipsum and welcome!" />
-        <CommentsList />
+        <TemperatureConverter />
+        <TodoList />
       </header>
     </div>
   );
