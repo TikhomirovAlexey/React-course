@@ -1,15 +1,18 @@
 import './App.css';
-import TemperatureConverter from './components/TemperatureConverter';
-import TodoList from './components/TodoList ';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import HomePage from './components/HomePage';
+import AboutPage from './components/AboutPage';
+import NotFoundPage from './components/NotFoundPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <TemperatureConverter />
-        <TodoList />
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
