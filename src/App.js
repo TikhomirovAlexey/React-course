@@ -1,14 +1,10 @@
-import './App.css';
-import TemperatureConverter from './components/TemperatureConverter';
-import TodoList from './components/TodoList ';
+import React from "react";
+import TasksList from "./components/TasksList";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <TemperatureConverter />
-        <TodoList />
-      </header>
+    <div>
+      <TasksList />
     </div>
   );
 }
