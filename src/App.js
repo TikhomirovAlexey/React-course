@@ -1,15 +1,22 @@
-import './App.css';
-import TemperatureConverter from './components/TemperatureConverter';
-import TodoList from './components/TodoList ';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import CatalogPage from "./pages/CatalogPage";
+import CartPage from "./pages/CartPage";
+import ProductPage from "./pages/ProductPage";
+import RegistrationPage from "./pages/RegistrationPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <TemperatureConverter />
-        <TodoList />
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} exact />
+        <Route path="/catalog" element={<CatalogPage />} />
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="/product" element={<ProductPage />} />
+        <Route path="/registration" element={<RegistrationPage />} />
+      </Routes>
+    </Router>
   );
 }
 
